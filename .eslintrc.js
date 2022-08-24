@@ -48,6 +48,7 @@ module.exports = {
         'beforeStatementContinuationChars': 'never'
       }
     ],
+    'no-unused-vars':0,
     'no-delete-var': 2,
     'prefer-const': [
       2,

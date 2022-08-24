@@ -7,26 +7,26 @@
             <div class="avatar">
               <img :src="avatar">
             </div>
-            <div class="username">{{ nickname }}</div>
+            <div class="username">{{ 'Demo User' }}</div>
             <div class="bio">海纳百川，有容乃大</div>
           </div>
           <div class="account-center-detail">
             <p>
-              <i class="title"></i>交互专家
+              <i class="title"></i>Software Engineer III
             </p>
             <p>
-              <i class="group"></i>蚂蚁金服－某某某事业群－某某平台部－某某技术部－UED
+              <i class="group"></i>Contoso－XXX－YYY－ZZZ－UED
             </p>
             <p>
               <i class="address"></i>
-              <span>浙江省</span>
-              <span>杭州市</span>
+              <span>Jiangsu</span>
+              <span>Suzhou</span>
             </p>
           </div>
           <a-divider/>
 
           <div class="account-center-tags">
-            <div class="tagsTitle">标签</div>
+            <div class="tagsTitle">Tag</div>
             <div>
               <template v-for="(tag, index) in tags">
                 <a-tooltip v-if="tag.length > 20" :key="tag" :title="tag">
@@ -62,7 +62,7 @@
           <a-divider :dashed="true"/>
 
           <div class="account-center-team">
-            <div class="teamTitle">团队</div>
+            <div class="teamTitle">Group</div>
             <a-spin :spinning="teamSpinning">
               <div class="members">
                 <a-row>
@@ -86,9 +86,9 @@
           :activeTabKey="noTitleKey"
           @tabChange="key => handleTabChange(key, 'noTitleKey')"
         >
-          <article-page v-if="noTitleKey === 'article'"></article-page>
+          <app-page v-if="noTitleKey === 'article'"></app-page>
           <app-page v-else-if="noTitleKey === 'app'"></app-page>
-          <project-page v-else-if="noTitleKey === 'project'"></project-page>
+          <app-page v-else-if="noTitleKey === 'project'"></app-page>
         </a-card>
       </a-col>
     </a-row>
@@ -122,15 +122,15 @@ export default {
       tabListNoTitle: [
         {
           key: 'article',
-          tab: '文章(8)'
+          tab: 'Outlook Usage'
         },
         {
           key: 'app',
-          tab: '应用(8)'
+          tab: 'Teams Usage'
         },
         {
           key: 'project',
-          tab: '项目(8)'
+          tab: 'Microsoft 365 Usage'
         }
       ],
       noTitleKey: 'app'

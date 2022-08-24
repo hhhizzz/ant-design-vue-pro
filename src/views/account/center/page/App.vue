@@ -10,13 +10,13 @@
             <a-avatar class="card-avatar" slot="avatar" :src="item.avatar" size="small"/>
             <div class="meta-cardInfo" slot="description">
               <div>
-                <p>活跃用户</p>
+                <p>Activity</p>
                 <p>
-                  <span>{{ item.activeUser }}<span>万</span></span>
+                  <span>{{ item.activeUser }}<span>K</span></span>
                 </p>
               </div>
               <div>
-                <p>新增用户</p>
+                <p>Usage</p>
                 <p>{{ item.newUser | NumberFormat }}</p>
               </div>
             </div>
@@ -61,10 +61,10 @@
 const dataSource = []
 for (let i = 0; i < 11; i++) {
   dataSource.push({
-    title: 'Alipay',
-    avatar: 'https://gw.alipayobjects.com/zos/rmsportal/WdGqmHpayyMjiEhcKoVE.png',
-    activeUser: 17,
-    newUser: 1700
+    title: 'Microsoft Apps',
+    avatar: 'https://res.cdn.office.net/shellux/word_24x.21f886b59cf807ae5818458ffa8cecd4.svg',
+    activeUser: Math.floor(Math.random() * 1000),
+    newUser: Math.floor(Math.random() * 2134)
   })
 }
 

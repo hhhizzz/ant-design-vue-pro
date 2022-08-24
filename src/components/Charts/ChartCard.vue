@@ -94,7 +94,7 @@ export default {
   .chart-card-content {
     margin-bottom: 12px;
     position: relative;
-    height: 46px;
+    height: 86px;
     width: 100%;
 
     .content-fix {
